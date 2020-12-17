@@ -31,11 +31,13 @@ int main (int argc, char* argv[]) {
   string texto = Lectura(fichero_entrada);
   cout << texto << endl << endl;
   int k = atoi(argv[4]);
-  if(atoi(argv[3]) == 1){
+  string operacion = argv[5];
+  if(operacion == "+"){
     string texto_encriptado = Encriptar(texto, k);
     cout << "El mensaje encriptado es: " << endl << texto_encriptado << endl;
+    Crear_archivo(fichero_salida, texto_encriptado);
   }
-  if(atoi(argv[3]) == 2){
+  if(operacion == "-"){
     string texto_desencriptar = Desencriptar(texto, k);
     cout << "El mensaje desencriptado es: " << endl << texto_desencriptar << endl;
     Crear_archivo(fichero_salida, texto_desencriptar);

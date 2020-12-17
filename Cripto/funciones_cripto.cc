@@ -138,7 +138,7 @@ for(int i = 0; i < texto.size(); i++){
        
       if((j-k) <= 0){
         
-        int pos = -52 + j + k ;
+        int pos = 52 - k + j ;
         char_array_desencriptado[i] = alf[pos];
         
       }else{
