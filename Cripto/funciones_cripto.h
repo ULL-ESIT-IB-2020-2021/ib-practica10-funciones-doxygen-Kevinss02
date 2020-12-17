@@ -18,3 +18,4 @@ string Lectura(string fichero_entrada);
 string Encriptar(string texto, int k);
 string Desencriptar(string texto, int k);
 void Crear_archivo(string fichero_salida, string texto);
+int Repeticiones(string texto);

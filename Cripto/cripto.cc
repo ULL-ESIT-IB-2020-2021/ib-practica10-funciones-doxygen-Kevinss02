@@ -42,5 +42,11 @@ int main (int argc, char* argv[]) {
     cout << "El mensaje desencriptado es: " << endl << texto_desencriptar << endl;
     Crear_archivo(fichero_salida, texto_desencriptar);
   }
+  int num_u;
+  if(operacion == "++"){
+    num_u = Repeticiones(texto);
+    cout << "Hay " << num_u << " repeticiones de la vocal u en el texto seleccionado" << endl;
+  }
+
   return 0;
 }

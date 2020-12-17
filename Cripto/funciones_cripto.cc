@@ -45,7 +45,8 @@ void Usage(int argc, char *argv[]) {
     << "password:        Palabra secreta en el caso de método 1, Valor de K en el método 2" << endl
     << "operación:       Operación a realizar el fichero" << endl
     << "                    +: encriptar el fichero" << endl
-    << "                    -: desencriptar el fichero" << endl;
+    << "                    -: desencriptar el fichero" << endl
+    << "                   ++: devuelve el número de repeticiones de la vocal u que contenga el fichero" << endl;
     exit(EXIT_SUCCESS);
   }
 
@@ -168,5 +169,22 @@ void Crear_archivo(string fichero_salida, string texto){
   archivo<<texto;
   archivo.close();
 
+}
+
+int Repeticiones(string texto){
+
+char char_array[texto.length()];
+strcpy(char_array, texto.c_str());
+int repeticiones = 0;
+char vocal_u = 'u';
+for(int i = 0; i < texto.length(); i++){
+  if(char_array[i] == vocal_u){
+    repeticiones++;
+  }
+
+  
+}
+
+  return repeticiones;
 }
  
